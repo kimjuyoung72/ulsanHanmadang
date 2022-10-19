@@ -116,15 +116,15 @@ function findAll(){
     .then(res =>{
         const result =
           res.data.map(reply =>{
-              if(reply.email == $email.value) {
+            if(reply.email == $email.value) {
 
                 return `<div class="myreply_contents"><div class="reply_writer"><span>${reply.nickname}</span><span>${reply.email}</span></div>
                         <div class="myreply_text"><textarea readonly data-owner-email="${reply.email}" data-reply-id="${reply.replyId}">${reply.rcontent}</textarea>
-                        <button data-button-name="editReplyBtn" type="button" class="editReplyBtn">수정</button>
+                        <div class="reply_in_button" style="display: flex;"><button data-button-name="editReplyBtn" type="button" class="editReplyBtn">수정</button>
                         <button data-button-name="delReplyBtn" type="button" class="delReplyBtn">삭제</button></div></div>`;
               }else {
                 return `<div class="reply_contents"><div class="reply_writer"><span>${reply.nickname}</span><span>${reply.email}</span></div>
-                        <div class="reply_text"><textarea readonly data-owner-email="${reply.email}" data-reply-id="${reply.replyId}">${reply.rcontent}</textarea></div></div>`
+                        <div class="reply_text"><textarea readonly data-owner-email="${reply.email}" data-reply-id="${reply.replyId}">${reply.rcontent}</textarea><div></div>`
               }
             });
         document.getElementById('replyList').innerHTML=result.join('');
