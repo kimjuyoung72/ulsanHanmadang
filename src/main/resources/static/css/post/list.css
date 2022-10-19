@@ -259,13 +259,13 @@ i.fa-solid.fa-reply{
 
 }
 
-
+/*
 .myreply_contents{
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px ;
-  /* outline: 1px solid red; */
+   outline: 1px solid red;
 }
-
+*/
 
 .reply_contents{
   border-bottom: 1px solid #ccc;
@@ -337,12 +337,12 @@ i.fa-solid.fa-reply{
 
 }
 
-
+/*
 .myreply_contents{
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px ;
-  /* outline: 1px solid red; */
-}
+   outline: 1px solid red;
+}*/
 
 
 .reply_contents{
